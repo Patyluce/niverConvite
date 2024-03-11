@@ -35,3 +35,14 @@ body{
 #bt1:hover,#bt2:hover{
     background-color: red;
 }
+#bt2 {
+    position: relative;
+    transition: left 0.3s ease; 
+}
+
+.move-right {
+    left: 80px;
+}
+.move-left{
+    right: 80px;
+}

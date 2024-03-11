@@ -1,0 +1,37 @@
+body{
+    font-family: 'Montserrat' , sans-serif;
+    background-color: blueviolet;
+}
+#titulo{
+    color: aliceblue;
+}
+.caixa{
+    text-align: center;
+    border: black 1px solid;
+    border-radius: 15px;
+     width: 20rem;
+     margin: 0 auto;
+     padding: 100px;
+     margin-top: 10%;
+     margin-bottom: 10%;
+     background-color: rgb(113, 113, 243);
+     box-shadow: 2px 2px 4px 2px black;
+}
+.bt{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 10px;
+}
+
+#bt1,#bt2{
+    font-size: 40px;
+   color: aliceblue;
+    background-color: transparent;
+    border: aliceblue solid 1.5px;
+    border-radius: 8px;
+}
+#bt1:hover,#bt2:hover{
+    background-color: red;
+}

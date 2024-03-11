@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>teste</title>
+    <title>convite</title>
 </head>
 <body>
     <div class="caixa">
-        <h1 id="titulo">Quer ir para o meu aniversário?</h1>
+        <h1 id="titulo">Aceita ir á minha festa de aniversário?</h1>
           
         <div class="bt">
         <button id="bt1">Sim</button>
@@ -17,18 +17,48 @@
     </div>
 
     <script>
- const bt = document.getElementById("bt2")
+ const bt = document.getElementById("bt2");
  
-   
- bt.addEventListener('mousemove', function() {
-
-    bt.style.position = "relative"; 
-   bt.style.left = "50px";
-  
- 
+bt.addEventListener('mouseenter', function() {
+    bt.classList.add('move-left');
 });
 
+bt.addEventListener('mouseleave' , function() {
+    bt.classList.remove('move-right'); 
+    bt.classList.remove('move-left')
+});
+bt.addEventListener('mousemove' , function(){
+    bt.classList.add('move-right')
+})
+bt.addEventListener('mouseover' , function() {
+    bt.classList.add('move-left')
+   // bt.classList.add('move-right')
+})
+bt.addEventListener('click' , function(){
+    bt.classList.add('mouse-right')
+})
 
+
+function criaImagem(){
+    const div = document.querySelector(".caixa");
+    
+    const image = document.createElement("img");
+    image.src = "https://media.tenor.com/iUygN_thLdMAAAAi/like-share-comment.gif"
+    image.style.position = "fixed";
+    image.style.top = "0";
+    image.style.left = "0";
+    image.style.width = "100%";
+    image.style.height = "100%";
+    image.style.objectFit = "cover"; // Garante que a imagem cubra todo o espaço disponível
+    
+    div.appendChild(image);
+}
+
+const sim = document.getElementById("bt1")
+sim.addEventListener('click' , function() {
+  criaImagem(sim)
+
+}) 
     </script>
 </body>
 </html>
